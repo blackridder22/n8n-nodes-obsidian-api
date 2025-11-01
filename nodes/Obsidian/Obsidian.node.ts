@@ -4,7 +4,7 @@ import { searchDescription } from './resources/search';
 import { periodicDescription } from './resources/periodic';
 import { recentDescription } from './resources/recent';
 
-export class Obsidian implements INodeType {
+export class ObsidianNode implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Obsidian',
 		name: 'obsidian',
