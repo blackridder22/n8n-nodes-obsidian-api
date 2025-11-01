@@ -1,0 +1,53 @@
+{
+    "name": "n8n-nodes-obsidian-api",
+    "version": "0.1.2",
+    "description": "n8n node for the Obsidian Local REST API",
+    "license": "MIT",
+    "homepage": "https://github.com/werley/n8n-nodes-obsidian",
+    "keywords": [
+        "n8n-community-node-package"
+    ],
+    "author": {
+        "name": "blackridder22",
+        "email": "br22.dev@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/werley/n8n-nodes-obsidian.git"
+    },
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": false,
+        "credentials": [
+            "dist/credentials/ObsidianApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/Obsidian/Obsidian.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "@typescript-eslint/eslint-plugin": "^5.0.0",
+        "@typescript-eslint/parser": "^5.0.0",
+        "eslint": "^8.0.1",
+        "n8n-workflow": "^1.115.0",
+        "prettier": "3.6.2",
+        "release-it": "^19.0.4",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
