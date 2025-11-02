@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-obsidian-api",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "n8n node for the Obsidian Local REST API",
   "license": "MIT",
   "homepage": "https://github.com/blackridder22/n8n-nodes-obsidian-api.git",
