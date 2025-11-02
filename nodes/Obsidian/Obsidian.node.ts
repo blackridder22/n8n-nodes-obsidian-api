@@ -4,11 +4,11 @@ import { searchDescription } from './resources/search';
 import { periodicDescription } from './resources/periodic';
 import { recentDescription } from './resources/recent';
 
-export class ObsidianNode implements INodeType {
+export class Obsidian implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Obsidian',
 		name: 'obsidian',
-		icon: { light: 'file:obsidian.svg', dark: 'file:obsidian.dark.svg' },
+		icon: { light: 'file:../../icons/obsidian.svg', dark: 'file:../../icons/obsidian.dark.svg' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',

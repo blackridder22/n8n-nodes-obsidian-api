@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObsidianNode = void 0;
+exports.Obsidian = void 0;
 const n8n_workflow_1 = require("n8n-workflow");
 const vault_1 = require("./resources/vault");
 const search_1 = require("./resources/search");
 const periodic_1 = require("./resources/periodic");
 const recent_1 = require("./resources/recent");
-class ObsidianNode {
+class Obsidian {
     constructor() {
         this.description = {
             displayName: 'Obsidian',
             name: 'obsidian',
-            icon: { light: 'file:obsidian.svg', dark: 'file:obsidian.dark.svg' },
+            icon: { light: 'file:../../icons/obsidian.svg', dark: 'file:../../icons/obsidian.dark.svg' },
             group: ['input'],
             version: 1,
             subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
@@ -73,5 +73,5 @@ class ObsidianNode {
         };
     }
 }
-exports.ObsidianNode = ObsidianNode;
+exports.Obsidian = Obsidian;
 //# sourceMappingURL=Obsidian.node.js.map

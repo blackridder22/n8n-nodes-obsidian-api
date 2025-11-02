@@ -41,7 +41,6 @@ export const vaultPatchDescription: INodeProperties[] = [
 		displayOptions: {
 			show: showForOperation,
 		},
-		description: 'Operation to perform (append, prepend, or replace)',
 	},
 	{
 		displayName: 'Target Type',
@@ -77,7 +76,7 @@ export const vaultPatchDescription: INodeProperties[] = [
 		displayOptions: {
 			show: showForOperation,
 		},
-		placeholder: 'e.g., "## Tasks" or "^block-id" or "tags"',
+		placeholder: 'e.g., "## Tasks" or "^block-ID" or "tags"',
 		description: 'Target identifier (heading path, block reference, or frontmatter field)',
 	},
 	{

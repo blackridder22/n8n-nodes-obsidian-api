@@ -14,11 +14,11 @@ export const recentGetRecentChangesDescription: INodeProperties[] = [
 			minValue: 1,
 			maxValue: 100,
 		},
-		default: 10,
+		default: 50,
 		displayOptions: {
 			show: showForOperation,
 		},
-		description: 'Maximum number of files to return',
+		description: 'Max number of results to return',
 	},
 	{
 		displayName: 'Days',

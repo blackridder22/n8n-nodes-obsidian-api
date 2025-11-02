@@ -21,28 +21,17 @@ exports.vaultDescription = [
         },
         options: [
             {
-                name: 'List Files',
-                value: 'list',
-                action: 'List files in a directory',
-                description: 'Lists all files and directories in a specific Obsidian directory',
+                name: 'Append to File',
+                value: 'append',
+                action: 'Append content to a file',
+                description: 'Append content to a new or existing file in the vault',
                 routing: {
                     request: {
-                        method: 'GET',
-                        url: '=/vault/{{$parameter.dirpath}}/',
-                    },
-                },
-            },
-            {
-                name: 'Get File Content',
-                value: 'get',
-                action: 'Get the content of a file',
-                description: 'Return the content of a single file in your vault',
-                routing: {
-                    request: {
-                        method: 'GET',
+                        method: 'POST',
                         url: '=/vault/{{$parameter.filepath}}',
+                        body: '={{$parameter.content}}',
                         headers: {
-                            Accept: '={{$parameter.format === "json" ? "application/vnd.olrapi.note+json" : "text/markdown"}}',
+                            'Content-Type': 'text/markdown',
                         },
                     },
                 },
@@ -64,18 +53,41 @@ exports.vaultDescription = [
                 },
             },
             {
-                name: 'Append to File',
-                value: 'append',
-                action: 'Append content to a file',
-                description: 'Append content to a new or existing file in the vault',
+                name: 'Delete File',
+                value: 'delete',
+                action: 'Delete a file or directory',
+                description: 'Delete a file or directory from the vault',
                 routing: {
                     request: {
-                        method: 'POST',
+                        method: 'DELETE',
                         url: '=/vault/{{$parameter.filepath}}',
-                        body: '={{$parameter.content}}',
+                    },
+                },
+            },
+            {
+                name: 'Get File Content',
+                value: 'get',
+                action: 'Get the content of a file',
+                description: 'Return the content of a single file in your vault',
+                routing: {
+                    request: {
+                        method: 'GET',
+                        url: '=/vault/{{$parameter.filepath}}',
                         headers: {
-                            'Content-Type': 'text/markdown',
+                            Accept: '={{$parameter.format === "json" ? "application/vnd.olrapi.note+json" : "text/markdown"}}',
                         },
+                    },
+                },
+            },
+            {
+                name: 'List Files',
+                value: 'list',
+                action: 'List files in a directory',
+                description: 'Lists all files and directories in a specific Obsidian directory',
+                routing: {
+                    request: {
+                        method: 'GET',
+                        url: '=/vault/{{$parameter.dirpath}}/',
                     },
                 },
             },
@@ -95,18 +107,6 @@ exports.vaultDescription = [
                             'Target-Type': '={{$parameter.targetType}}',
                             Target: '={{$parameter.target}}',
                         },
-                    },
-                },
-            },
-            {
-                name: 'Delete File',
-                value: 'delete',
-                action: 'Delete a file or directory',
-                description: 'Delete a file or directory from the vault',
-                routing: {
-                    request: {
-                        method: 'DELETE',
-                        url: '=/vault/{{$parameter.filepath}}',
                     },
                 },
             },

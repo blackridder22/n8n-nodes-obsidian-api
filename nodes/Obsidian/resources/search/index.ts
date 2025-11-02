@@ -35,7 +35,7 @@ export const searchDescription: INodeProperties[] = [
 			{
 				name: 'Complex Search',
 				value: 'complex',
-				action: 'Perform a complex (DQL or JSONLogic) search',
+				action: 'Perform a complex dql or json logic search',
 				description: 'Search for documents using a Dataview or JsonLogic query',
 				routing: {
 					request: {

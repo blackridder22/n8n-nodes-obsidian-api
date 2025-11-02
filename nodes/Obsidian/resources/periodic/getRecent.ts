@@ -34,11 +34,11 @@ export const periodicGetRecentDescription: INodeProperties[] = [
 			minValue: 1,
 			maxValue: 50,
 		},
-		default: 5,
+		default: 50,
 		displayOptions: {
 			show: showForOperation,
 		},
-		description: 'Maximum number of notes to return',
+		description: 'Max number of results to return',
 	},
 	{
 		displayName: 'Include Content',
